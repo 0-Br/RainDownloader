@@ -2,10 +2,6 @@
 __pycache__/
 *.pyc
 
-# 下载产物
-*.mp4
-ffmpeg_list.txt
-
 # 系统文件
 .DS_Store
 ._*

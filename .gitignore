@@ -1,6 +1,10 @@
 # Python 编译产物
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
 
 # 系统文件
 .DS_Store

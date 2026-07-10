@@ -21,10 +21,11 @@
 ## 使用方法
 
 1. 登录[荷塘雨课堂](https://pro.yuketang.cn)，从浏览器开发者工具中获取登录 Cookie
-2. 编辑 `courses.py` 底部配置区：
-   - `Cookie`：填入登录 Cookie
-   - `ClassroomID`：目标课堂 ID
-   - `SaveDirName`：视频保存子目录名
+2. 编辑 `courses.py`：
+   - `DOWNLOAD_BASE_DIR`（文件头部）：下载根目录，默认值为 WSL 专属路径
+   - `Cookie`（底部配置区）：填入登录 Cookie
+   - `ClassroomID`（底部配置区）：目标课堂 ID
+   - `SaveDirName`（底部配置区）：视频保存子目录名
 3. 运行批量下载：
    ```bash
    python courses.py
@@ -39,7 +40,7 @@ python lessons.py
 
 | 变量 | 位置 | 说明 |
 |------|------|------|
-| `DOWNLOAD_BASE_DIR` | 文件头部 | 下载文件的根目录 |
+| `DOWNLOAD_BASE_DIR` | 文件头部 | 下载文件的根目录（默认 `/mnt/wsl/hdd/RainDownload`，非 WSL 环境需修改） |
 | `DOMAIN` | 文件头部 | 雨课堂域名（默认 `pro.yuketang.cn`） |
 | `Cookie` | 入口配置 | 登录会话 Cookie |
 | `ClassroomID` | `courses.py` | 目标课堂 ID |
@@ -53,3 +54,7 @@ python lessons.py
 |------|------|
 | `courses.py` | 批量下载入口：获取课堂的全部课程列表，逐一调用下载逻辑 |
 | `lessons.py` | 单课程下载：视频分段获取、下载、ffmpeg 合并的核心实现 |
+
+## 声明
+
+本项目仅供学习交流参考。使用者应确保对所下载内容拥有合法访问权限，并遵守相关平台的服务条款。

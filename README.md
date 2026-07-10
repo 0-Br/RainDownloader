@@ -1,6 +1,6 @@
 # RainDownloader
 
-从[荷塘雨课堂](https://pro.yuketang.cn)批量下载课程回放视频的命令行工具。
+**从[荷塘雨课堂](https://pro.yuketang.cn)批量下载课程回放视频的命令行工具**
 
 荷塘雨课堂（Yuketang）是清华大学广泛使用的在线教学平台，支持课堂直播与回放。本工具通过其 API 接口自动获取课程列表并下载回放视频，适用于需要离线保存课程录像的场景。
 
@@ -47,7 +47,7 @@ python lessons.py
 | `DeletePartsAfterMerge` | 入口配置 | 合并后是否删除分段文件 |
 | `ActivityTypeToDownload` | `courses.py` | 活动类型筛选（`14` = 视频课） |
 
-## 文件说明
+## 项目结构
 
 | 文件 | 用途 |
 |------|------|
